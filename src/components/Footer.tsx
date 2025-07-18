@@ -1,37 +1,51 @@
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react"
-
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 const Footer = () => {
-  const quickLinks = [
-    { name: "मुखपृष्ठ", href: "#home" },
-    { name: "पक्षाविषयी", href: "#about" },
-    { name: "नेतृत्व", href: "#leadership" },
-    { name: "आमचे कार्य", href: "#work" },
-    { name: "बातम्या व माध्यमे", href: "#news" },
-    { name: "संपर्क", href: "#contact" }
-  ]
-
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" }
-  ]
-
-  return (
-    <footer className="bg-card border-t border-border">
+  const quickLinks = [{
+    name: "मुखपृष्ठ",
+    href: "#home"
+  }, {
+    name: "पक्षाविषयी",
+    href: "#about"
+  }, {
+    name: "नेतृत्व",
+    href: "#leadership"
+  }, {
+    name: "आमचे कार्य",
+    href: "#work"
+  }, {
+    name: "बातम्या व माध्यमे",
+    href: "#news"
+  }, {
+    name: "संपर्क",
+    href: "#contact"
+  }];
+  const socialLinks = [{
+    icon: Facebook,
+    href: "#",
+    label: "Facebook"
+  }, {
+    icon: Twitter,
+    href: "#",
+    label: "Twitter"
+  }, {
+    icon: Instagram,
+    href: "#",
+    label: "Instagram"
+  }, {
+    icon: Youtube,
+    href: "#",
+    label: "YouTube"
+  }];
+  return <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="https://shivsena.zaplontech.com/wp-content/uploads/2025/05/Shivsena-logo-3.png" 
-                alt="शिवसेना" 
-                className="h-12 w-auto"
-              />
-              <span className="text-2xl font-bold text-primary">शिवसेना</span>
+              <img src="https://shivsena.zaplontech.com/wp-content/uploads/2025/05/Shivsena-logo-3.png" alt="शिवसेना" className="h-12 w-auto" />
+              
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-lg">
               शिवसेना ही महाराष्ट्राच्या अस्मितेचा बुलंद आवाज आहे. मराठी अभिमान, सामाजिक न्याय आणि निःस्वार्थ सेवाभाव या मूल्यांवर आधारलेली शिवसेना, महाराष्ट्राच्या इतिहासात महत्त्वपूर्ण योगदान देत आली आहे.
@@ -39,19 +53,11 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <Button
-                  key={index}
-                  variant="outline"
-                  size="icon"
-                  className="hover:bg-primary hover:text-primary-foreground"
-                  asChild
-                >
+              {socialLinks.map((social, index) => <Button key={index} variant="outline" size="icon" className="hover:bg-primary hover:text-primary-foreground" asChild>
                   <a href={social.href} aria-label={social.label}>
                     <social.icon className="w-4 h-4" />
                   </a>
-                </Button>
-              ))}
+                </Button>)}
             </div>
           </div>
 
@@ -59,16 +65,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-6">द्रुत लिंक्स</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {quickLinks.map((link, index) => <li key={index}>
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -115,8 +116,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  )
-}
-
-export default Footer
+    </footer>;
+};
+export default Footer;
