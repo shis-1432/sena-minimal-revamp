@@ -56,8 +56,8 @@ const CursorBubble = () => {
       <div
         className={`w-6 h-6 rounded-full transition-all duration-300 ${
           isHovered 
-            ? 'bg-primary border-2 border-primary-foreground' 
-            : 'bg-foreground/20 border border-foreground/40'
+            ? 'bg-primary border-2 border-white' 
+            : 'bg-primary/60 border border-primary/80'
         }`}
       />
       <div
